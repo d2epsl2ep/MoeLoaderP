@@ -27,7 +27,7 @@ public class ZeroChanSite : MoeSite
         };
     }
 
-    public override string HomeUrl => "http://www.zerochan.net";
+    public override string HomeUrl => "https://www.zerochan.net";
 
     public override string DisplayName => "Zerochan";
 

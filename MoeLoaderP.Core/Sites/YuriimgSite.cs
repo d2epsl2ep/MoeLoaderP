@@ -22,7 +22,7 @@ public class YuriimgSite : MoeSite
         };
     }
 
-    public override string HomeUrl => "http://yuriimg.com";
+    public override string HomeUrl => "https://yuriimg.com";
     public override string ShortName => "yuriimg";
     public override string DisplayName => "Yuriimg";
 

@@ -13,8 +13,8 @@
 ## 注意事项
 
 本软件支持的系统为Windows 7以上64位系统。
-需要系统安装.Net 6版本的框架(SDK)。
-> **<https://dotnet.microsoft.com/download/dotnet/6.0>**
+需要系统安装 .NET 9 版本的框架(Runtime)。
+> **<https://dotnet.microsoft.com/download/dotnet/9.0>**
 
 ## 关于 MoeLoader-P
 

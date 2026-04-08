@@ -33,10 +33,10 @@ public class MiniTokyoSite : MoeSite
         DownloadTypes.Add("原图", DownloadTypeEnum.Origin);
     }
 
-    public override string HomeUrl => "http://www.minitokyo.net";
+    public override string HomeUrl => "https://www.minitokyo.net";
 
-    public static string HomeGalleryUrl => "http://gallery.minitokyo.net";
-    public static string HomeBrowseUrl => "http://browse.minitokyo.net";
+    public static string HomeGalleryUrl => "https://gallery.minitokyo.net";
+    public static string HomeBrowseUrl => "https://browse.minitokyo.net";
     public override string DisplayName => "MiniTokyo";
 
     public override string ShortName => "minitokyo";
@@ -74,7 +74,7 @@ public class MiniTokyoSite : MoeSite
             {"username", _user[accIndex]},
             {"password", _pass[accIndex]}
         });
-        var p = await Net.Client.PostAsync("http://my.minitokyo.net/login", content, token);
+        var p = await Net.Client.PostAsync("https://my.minitokyo.net/login", content, token);
         if (p.IsSuccessStatusCode)
         {
             IsUserLogin = true;
@@ -143,8 +143,8 @@ public class MiniTokyoSite : MoeSite
             var imgHref = node.SelectSingleNode(".//img");
             var sampleUrl = imgHref.Attributes["src"].Value;
             img.Urls.Add(DownloadTypeEnum.Thumbnail, sampleUrl, HomeUrl);
-            const string api2 = "http://static2.minitokyo.net";
-            const string api = "http://static.minitokyo.net";
+            const string api2 = "https://static2.minitokyo.net";
+            const string api = "https://static.minitokyo.net";
             var previewUrl =
                 $"{api2}/view{sampleUrl[sampleUrl.IndexOf('/', sampleUrl.IndexOf(".net/", StringComparison.Ordinal) + 5)..]}";
             var fileUrl =
